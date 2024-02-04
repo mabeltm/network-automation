@@ -1,0 +1,22 @@
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#do show run
+Building configuration...
+
+Current configuration : 4388 bytes
+!
+! Last configuration change at 21:35:11 UTC Sat Feb 3 2024 by matt
+!
+version 17.3
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+! Call-home is enabled by Smart-Licensing.
+service call-home
+platform qfp utilization monitor load 80
+platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname R1
+R1(config)#end
+R1#
